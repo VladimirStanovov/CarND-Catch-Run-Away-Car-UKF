@@ -67,6 +67,8 @@ public:
   ///* Sigma point spreading parameter
   double lambda_;
 
+  long long predict_time;
+  VectorXd x_predict;
 
   /**
    * Constructor
@@ -90,6 +92,8 @@ public:
    * @param delta_t Time between k and k+1 in s
    */
   void Prediction(double delta_t);
+
+  void Prediction_2(double delta_t_2);
 
   /**
    * Updates the state and the state covariance matrix using a laser measurement
